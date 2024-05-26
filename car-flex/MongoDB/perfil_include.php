@@ -28,8 +28,14 @@ foreach ($publicacionesUsuario as $publicacion) {
                     </div>
                 </div>
                 <div>
-                    <form action="publicacion_modificar.php" id="editarPubli" method="post"><input type="hidden" name="_id_publi" id="_id_publi" value="'.$FotoPubli.'"><button type="sumbit">Editar<i class="fa-solid fa-pen-to-square"></i></button></form>
-                    <form action="publicacion_eliminar.php" id="eliminar" method="post" enctype="multipart/form-data"><input type="hidden" name="_id_publi" id="_id_publi" value="'.$FotoPubli.'"><button>Eliminar<i class="fa-solid fa-trash"></i></button></form>
+                    <form action="publicacion_modificar.php" id="editarPubli" method="post">
+                        <input type="hidden" name="_id_publi" id="_id_publi" value="'.$FotoPubli.'">
+                        <button type="sumbit">Editar<i class="fa-solid fa-pen-to-square"></i></button>
+                    </form>
+                    <form action="publicacion_eliminar.php" id="eliminar" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="_id_publi" id="_id_publi" value="'. $FotoPubli .'">
+                        <button type="button" id="eliminarPubli">Eliminar<i class="fa-solid fa-trash"></i></button>
+                    </form>
                 </div>
             </div>
             <div id="FotoPubli">

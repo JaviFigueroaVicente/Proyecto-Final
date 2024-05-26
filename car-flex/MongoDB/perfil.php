@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/d3a1f4d582.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Cormorant+Garamond?sort=popularity&subset=latin-ext&noto.lang=cs_Latn">
     <title>Mi Perfil</title>
+    
 </head>
 <body class="layoutPerfil">
     <header class="headerLogin">
@@ -31,6 +32,7 @@
             <?php
                 include ("footer.php");
             ?> 
-    </footer>      
+    </footer>  
+    <script src="js/eliminar.js"></script>  
 </body>
 </html>
