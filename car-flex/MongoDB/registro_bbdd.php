@@ -43,7 +43,7 @@ if (isset($_POST["Usuario"], $_POST["nombre"], $_POST["Apellido"], $_POST["corre
         // Mover la imagen al directorio deseado
         $resultado = move_uploaded_file($_FILES["fotoPerfil"]["tmp_name"], $rutaPerfil);  //Movemos archivo a la ruta especificada
     }else{     
-        $rutaPerfil = 'img/fotosPerfil/foto_perfil.webp';  //Movemos archivo a la ruta especificada
+        $rutaPerfil = 'img/fotosPerfil/foto_perfil.webp';  
     }
 
     // Insertar usuario en la base de datos

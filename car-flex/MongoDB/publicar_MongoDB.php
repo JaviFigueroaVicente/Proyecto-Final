@@ -15,6 +15,8 @@ if (isset($_POST["texto"], $_POST["ubicacion"])) {
         $rutaPubli = 'img/fotosPubli/' . date('d_m_Y_H_i_s') . '_' . $usuarioPubli . '_' . $archivoPubli;
         // Mover la imagen al directorio deseado
         $resultadoPubli = move_uploaded_file($_FILES["fotoPubli"]["tmp_name"], $rutaPubli);  //Movemos archivo a la ruta especificada
+    }else{
+        $rutaPubli='img\fotosPubli\Foto_predeterminada.webp';
     }
 
     $insertPubli = $publicaciones->insertOne([

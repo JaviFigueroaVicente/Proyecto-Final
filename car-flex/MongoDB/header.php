@@ -24,9 +24,7 @@ include("Conexion_MongoDB.php");
             </ul>
         </nav>
     </section>';
-    }else{ 
-    //filtro de búsqueda
-    
+    }else{     
     $perfilUsuario = $coleccion->findOne(["Usuario" => $_SESSION['usuari_nom']]);
     $FotoPerfil = $perfilUsuario["fotoPerfil"];      
     echo '<section id="MenuLogin">
@@ -35,7 +33,7 @@ include("Conexion_MongoDB.php");
         <h1>Car Flex</h1></a>
     </div>
     <div>
-        <form action="" id="busqueda" method="get">
+        <form action="publicacion.php" id="busqueda" method="get">
             <label for="busqueda"><input type="text" placeholder="Que quieres buscar?" id="form_busqueda" name="form_busqueda">
             <input type="submit" value="Buscar">
         </form>
@@ -50,17 +48,7 @@ include("Conexion_MongoDB.php");
     </nav>
 </section>';
     }
-    $busqueda = isset($_GET['form_busqueda']) ? $_GET['form_busqueda'] : "";
-
-    // Si hay un término de búsqueda, filtrar por usuarioPubli
-    if (!empty($busqueda)) {
-        $publicacionesUsuarios = $publicaciones->find(['usuarioPubli' => $busqueda]);
-    } else {
-        // Si no hay término de búsqueda, recuperar todas las publicaciones ordenadas por hora
-        $publicacionesUsuarios = $publicaciones->find([], ['sort' => ['hora' => -1]]);
-    }
-$filtro = isset($_GET['filtro']) ? $_GET['filtro'] : 'recientes';
+    
 ?>
 </body>
-
 </html>

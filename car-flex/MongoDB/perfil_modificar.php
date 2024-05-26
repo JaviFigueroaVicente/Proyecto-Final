@@ -21,7 +21,9 @@ if (isset($_POST["_id"])){
             $archivo = $_FILES['NuevaFoto']['name'];
             $rutaNuevaFoto = 'img/fotosPerfil/' . time() . '_' . $NuevoUsuario . '_' . $archivo;
             $resultado = move_uploaded_file($_FILES["NuevaFoto"]["tmp_name"], $rutaNuevaFoto);
+            if($fotoPerfil!='img/fotosPerfil/foto_perfil.webp'){
             unlink($fotoPerfil);
+            }
         } else {
             // Si no se sube una nueva foto, mantener la foto de perfil actual
             $rutaNuevaFoto = $fotoPerfil; // Obtener la ruta de la foto de perfil actual

@@ -1,4 +1,5 @@
 <?php
+
     foreach ($publicacionesUsuarios as $publicacion) {
         $textoPubli = $publicacion["texto"];
         $FotoPubli = $publicacion["fotoPubli"];

@@ -2,7 +2,7 @@
 include("Conexion_MongoDB.php");
 
 // Obtener las últimas 5 publicaciones del usuario
-$publicacionesUsuario = $publicaciones->find(["usuarioPubli" => $_SESSION['usuari_nom']]);
+$publicacionesUsuario = $publicaciones->find(["usuarioPubli" => $_SESSION['usuari_nom']],['sort'=>['hora'=>-1]]);
 
 foreach ($publicacionesUsuario as $publicacion) {
     $_id_Publi=$publicacion["_id"];
