@@ -32,11 +32,15 @@
                         <input name="contra_login" id="contra_login" type="password" placeholder="Contraseña" required pattern="[a-zA-Z'-*-_-/-]]{8,128}">
                         <span id="span"></span>
                     </div>
+                    <div id="recordarUsuario">
+                        <div>
+                            <input type="checkbox" id="recordar" name="recordar">
+                            <label for="recordar" class="custom-checkbox"></label>
+                            <label for="recordarUsu">Recordar usuario</label>
+                        </div>
+                    </div>
                 </div>
-                <div id="RecordarUsuario">
-                    <input type="checkbox" id="recordar" name="recordar">
-                    <label for="recordar">Recordar usuario</label>
-                </div>
+                
                 <div class="Entrar">
                     <button id="entrar" type="submit">ENTRAR</button>
                 </div>

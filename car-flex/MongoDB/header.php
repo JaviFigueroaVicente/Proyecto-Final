@@ -35,7 +35,7 @@ include("Conexion_MongoDB.php");
     <div>
         <form action="index_buscador.php" id="busqueda" method="post">
             <input type="text" placeholder="Que quieres buscar?" id="form_busqueda" name="form_busqueda">
-            <input type="submit" value="Buscar">
+            <input id="Buscar" type="submit" value="Buscar">
         </form>
     </div>
     <nav id="MenuPrincipal">
