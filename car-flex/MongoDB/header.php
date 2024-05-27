@@ -33,7 +33,7 @@ include("Conexion_MongoDB.php");
         <h1>Car Flex</h1></a>
     </div>
     <div>
-        <form action="publicacion.php" id="busqueda" method="get">
+        <form action="index.php" id="busqueda" method="post">
             <label for="busqueda"><input type="text" placeholder="Que quieres buscar?" id="form_busqueda" name="form_busqueda">
             <input type="submit" value="Buscar">
         </form>

@@ -34,5 +34,6 @@
             ?> 
     </footer>  
     <script src="js/eliminar.js"></script>  
+    <script src="js/form_perfil.js"></script>
 </body>
 </html>

@@ -16,6 +16,8 @@ if(isset($_POST['usuario_login'], $_POST['contra_login'])){
         session_start();
         // Almacenar el nombre de usuario en la sesión
         $_SESSION['usuari_nom'] = $nombreUsuario;  
+        // Crear una cookie al iniciar la sesión con 
+        setcookie($_SESSION['usuari_nom'], $_SESSION['usuari_nom'], 0); // La cookie expirará al cerrar el navegador
         // Redirigir al usuario a la página index.php
         header("location:index.php");
         exit();

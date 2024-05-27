@@ -54,7 +54,7 @@
                     </div>
                     <input type="hidden" name="_id_publi" id="_id_publi" value="'.$_id_Publi.'">
                     <div id="submitPublicar">
-                        <input type="submit" value="MODIFICAR" id="submit">
+                        <input type="submit" value="MODIFICAR" class="submit">
                     </div>
                 </fieldset>
             </form>';
