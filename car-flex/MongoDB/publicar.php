@@ -24,27 +24,27 @@
         ?>
     </section>
     <section class="SubirPubli">
-        <form class="publicar" action="publicar_MongoDB.php" enctype="multipart/form-data" method="POST">
+        <form id="publicar" class="publicar" action="publicar_MongoDB.php" enctype="multipart/form-data" method="POST">
             <fieldset>
                 <h2>Publicar</h2>
-                <div >
+                <div>
                     <div id="span">
-                        <label for="texto">Que quieres comentar?</label>
+                        <label for="texto">¿Qué quieres comentar?</label>
                         <span>*</span>
                     </div>
-                    <input require id="texto" name="texto" type="text" placeholder="En que estás pesando..." pattern="{300}">
-                    <span id="spanTexto"> </span>
+                    <input required id="texto" name="texto" type="text" placeholder="¿En qué estás pensando?" maxlength="300">
+                    <span id="spanTexto"></span>
                 </div>
                 <div>
-                    <label for="ubicacion">Donde está situada la foto?</label>
-                    <input require id="ubicacion" name="ubicacion" placeholder="Ubicación" type="text" >
+                    <label for="ubicacion">¿Dónde está situada la foto?</label>
+                    <input id="ubicacion" name="ubicacion" placeholder="Ubicación" type="text">
                 </div>
                 <div>
                     <div id="span">
                         <label for="foto">Añade la foto</label>
                         <span>*</span>
                     </div>
-                    <input require type="file" name="fotoPubli" id="fotoPubli">
+                    <input required type="file" name="fotoPubli" id="fotoPubli">
                     <span id="spanFoto"></span>
                 </div>
                 <div id="previsualizarButton">

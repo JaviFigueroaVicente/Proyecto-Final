@@ -22,12 +22,12 @@ function registrar(event) {
     const spanConfContra = document.getElementById('spanConfContra');
 
     // Inicializar variable para controlar si el formulario es válido
-    let formIsValid = true;
+    let ValidarForm = true;
 
     // Validación de usuario
     if (usuario === "") {
         spanUsuario.textContent = "Introduce un nombre de usuario válido";
-        formIsValid = false;
+        ValidarForm = false;
     } else {
         spanUsuario.textContent = "";
     }
@@ -35,7 +35,7 @@ function registrar(event) {
     // Validación de nombre
     if (nombre === "") {
         spanNombre.textContent = "Introduce tu nombre";
-        formIsValid = false;
+        ValidarForm = false;
     } else {
         spanNombre.textContent = "";
     }
@@ -43,7 +43,7 @@ function registrar(event) {
     // Validación de apellido
     if (apellido === "") {
         spanApellido.textContent = "Introduce tu primer apellido";
-        formIsValid = false;
+        ValidarForm = false;
     } else {
         spanApellido.textContent = "";
     }
@@ -51,14 +51,14 @@ function registrar(event) {
     // Validación de contraseñas
     if (contra === "") {
         spanContra.textContent = "Introduce una contraseña válida";
-        formIsValid = false;
+        ValidarForm = false;
     } else {
         spanContra.textContent = "";
     }
 
     if (contra !== confcontra) {
         spanConfContra.textContent = "Las contraseñas no coinciden";
-        formIsValid = false;
+        ValidarForm = false;
     } else {
         spanConfContra.textContent = "";
     }
@@ -66,20 +66,20 @@ function registrar(event) {
     // Validación de correos electrónicos
     if (correo === "") {
         spanCorreo.textContent = "Introduce un correo electrónico válido";
-        formIsValid = false;
+        ValidarForm = false;
     } else {
         spanCorreo.textContent = "";
     }
 
     if (correo !== confcorreo) {
         spanConfCorreo.textContent = "Los correos no coinciden";
-        formIsValid = false;
+        ValidarForm = false;
     } else {
         spanConfCorreo.textContent = "";
     }
 
     // Si todos los campos son válidos, enviar el formulario
-    if (formIsValid) {
+    if (ValidarForm) {
         document.getElementById('FormRegistro').submit();
     }
 }
