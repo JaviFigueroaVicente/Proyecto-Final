@@ -15,7 +15,7 @@
         ?>
     </header>
     <section class="LinkRegistro">
-            <form action="registro_bbdd.php" enctype="multipart/form-data" id="FormRegistro" method="POST">
+        <form action="registro_bbdd.php" enctype="multipart/form-data" id="FormRegistro" method="POST">
             <fieldset>
                 <h2>Registro</h2>
                 <h3>Datos Personales</h3>
@@ -23,16 +23,19 @@
                     <div class="Obligatorio">
                         <label for="Usuario">Nombre de usuario: <span>*</span></label>
                         <input id="Usuario" name="Usuario" type="text" placeholder="Usuario" required pattern="[a-zA-Z'-]{128}">
+                        <span id="spanUsuario"></span>
                     </div>
                     <div class="Obligatorio">
                         <label for="nombre">Nombre: <span>*</span></label>
                         <input id="nombre" name="nombre" type="text" placeholder="Nombre" required pattern="[a-zA-Z'-]{3,64}">
+                        <span id="spanNombre"></span>
                     </div>
                 </div>
                 <div id="RegistroApellidos">
                     <div class="Obligatorio">
                         <label for="Apellido">Primer Apellido: <span>*</span></label>
                         <input id="Apellido" name="Apellido" type="text" placeholder="Apellidos" required pattern="[a-zA-Z'-]{128}">
+                        <span id="spanApellido"></span>
                     </div>
                     <div>
                         <label for="apellido2">Segundo Apellido: </label>
@@ -46,20 +49,24 @@
                     <div class="Obligatorio">
                         <label for="correo">Correo electrónico: <span>*</span></label>
                         <input id="correo" name="correo" type="email" placeholder="E-mail" required>
+                        <span id="spanCorreo"></span>
                     </div>
                     <div class="Obligatorio">
                         <label for="confcorreo">Confirmar correo electrónico: <span>*</span></label>
                         <input id="confcorreo" name="confcorreo" type="email" placeholder="Confirmar E-mail" required>
+                        <span id="spanConfcorreo"></span>
                     </div>
                 </div>
                 <div id="RegistroContra">
                     <div class="Obligatorio">
                         <label for="Contrasena">Contraseña: <span>*</span></label>
                         <input id="Contrasena" name="Contrasena" type="password" placeholder="Contraseña" required pattern="[a-zA-Z'-*-_-/-]{8,128}">
+                        <span id="spanContra"></span>
                     </div>
                     <div class="Obligatorio">
                         <label for="ConfContrasena">Confirmar contraseña: <span>*</span></label>
                         <input id="ConfContrasena" name="ConfContrasena" type="password" placeholder="Confirmar Contraseña" required pattern="[a-zA-Z'-*-_-/-]{8,128}">
+                        <span id="spanConfContra"></span>
                     </div>
                 </div>
             </fieldset>
@@ -72,7 +79,7 @@
             </fieldset>
             <fieldset id="Registrarse">
                 <div id="Boton">
-                    <input id="submit" type="submit" value="REGISTRARSE">
+                    <input id="registrar" class="submit" type="submit" value="REGISTRARSE">
                 </div>
                 <div id="aqui">
                     <p>Si ya tienes cuenta puedes accader a tu cuenta directamente desde </p> 
@@ -86,5 +93,6 @@
             include ("footer.php");
         ?> 
     </footer>      
+    <script src="js/erroresRegistro.js"></script>
 </body>
 </html>

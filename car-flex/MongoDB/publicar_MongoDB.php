@@ -8,6 +8,8 @@ if (isset($_POST["texto"], $_POST["ubicacion"])) {
     $usuarioPubli=$_SESSION['usuari_nom'];
     $likes=0;
     $likesUsuarios=[];
+    
+  
 
     if ((($_FILES["fotoPubli"]["type"] == "image/webp")) && ($_FILES["fotoPubli"]["size"] < 3000000)){ // Comprobamos si se ha subido un archivo
         $archivoPubli = $_FILES['fotoPubli']['name'];
@@ -28,12 +30,11 @@ if (isset($_POST["texto"], $_POST["ubicacion"])) {
         "likesUsuarios"=> $likesUsuarios,
         "hora" => date('d/m/Y H:i:s')
     ]);
+    
+
     if ($insertPubli) {
         header("Location: index.php");
         exit;
     }
-}else{
-    echo("no se inserta");
 }
-
 ?>

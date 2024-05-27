@@ -44,7 +44,7 @@ echo '<form action="perfil_modificar.php" method="post" enctype="multipart/form-
             <input type="hidden" name="_id" id="_id" value="'.$_id.'">
             <input type="hidden" name="foto_perfil" id="foto_perfil" value="'.$FotoPerfil.'">
         <div id="Guardar">
-            <button  type="submit">Guardar</button>
+            <button type="submit">Guardar</button>
         </div>
     </fieldset>
 </form>';

@@ -12,7 +12,7 @@ include("Conexion_MongoDB.php");
             </div>
         </div>
         <div id="FotoPre">
-            <img id="fotoPre" src="img/fotosPubli/Foto_predeterminada.webp" alt="FotoPublicada"></img>
+            <img id="fotoPre" src="img/FotosPubli/Foto_predeterminada.webp" alt="FotoPublicada"></img>
         </div>
         <div id="FooterPre">
             <div id="TxtPre">

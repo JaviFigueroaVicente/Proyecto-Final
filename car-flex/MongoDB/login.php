@@ -25,14 +25,16 @@
                     <div class="Obligatorio">
                         <label for="Usuario">Nombre de usuario: </label>
                         <input name="usuario_login" id="usuario_login" type="text" placeholder="Nombre de usuario" required pattern="[a-zA-Z'-]{3,64}">
+                        <span id="span"></span>
                     </div>
                     <div class="Obligatorio">
                         <label for="Contraseña">Contraseña: </label>
                         <input name="contra_login" id="contra_login" type="password" placeholder="Contraseña" required pattern="[a-zA-Z'-*-_-/-]]{8,128}">
+                        <span id="span"></span>
                     </div>
                 </div>
                 <div class="Entrar">
-                    <button  type="submit">ENTRAR</button>
+                    <button id="entrar" type="submit">ENTRAR</button>
                 </div>
                 <div id="LinkRegistro">
                     <p>¿Aún no tienes cuenta?<a href="registre.php">REGISTRATE AQUÍ</a></p>

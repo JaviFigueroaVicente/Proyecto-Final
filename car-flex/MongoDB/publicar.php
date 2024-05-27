@@ -27,23 +27,31 @@
         <form class="publicar" action="publicar_MongoDB.php" enctype="multipart/form-data" method="POST">
             <fieldset>
                 <h2>Publicar</h2>
-                <div>
-                    <label for="texto">Que quieres comentar?</label>
+                <div >
+                    <div id="span">
+                        <label for="texto">Que quieres comentar?</label>
+                        <span>*</span>
+                    </div>
                     <input require id="texto" name="texto" type="text" placeholder="En que estás pesando..." pattern="{300}">
+                    <span id="spanTexto"> </span>
                 </div>
                 <div>
                     <label for="ubicacion">Donde está situada la foto?</label>
                     <input require id="ubicacion" name="ubicacion" placeholder="Ubicación" type="text" >
                 </div>
                 <div>
-                    <label for="foto">Añade la foto</label>
+                    <div id="span">
+                        <label for="foto">Añade la foto</label>
+                        <span>*</span>
+                    </div>
                     <input require type="file" name="fotoPubli" id="fotoPubli">
+                    <span id="spanFoto"></span>
                 </div>
                 <div id="previsualizarButton">
                     <input type="button" id="previsualizar" value="Previsualizar">
                 </div>
                 <div id="submitPublicar">
-                    <input type="submit" value="PUBLICAR" id="submit">
+                    <input type="submit" value="PUBLICAR" id="submit" class="submit">
                 </div>
             </fieldset>
         </form>
@@ -59,5 +67,6 @@
         ?> 
     </footer>  
 </body>
+<script src="js/errores.js"></script>
 <script src="js/publicacion_pre.js"></script>
 </html>

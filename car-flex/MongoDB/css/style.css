@@ -274,10 +274,10 @@ body{
     grid-area: 2 / 2 / 3 / 3;
     display: flex;
     gap: 10%;
-    padding-top: 4%;
-    padding-bottom: 1.4%;
+    padding-top: 3.1%;
+    padding-bottom: 0.6%;
     margin-left: 10%;
-    height: 80%;
+    height: 82%;
 }
 .publicar{
     display: flex;
@@ -307,14 +307,32 @@ body{
     font-weight: 700;
     margin-bottom: 2.5%;
 }
+#span{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 0%;
+}
 
 #texto {
-    height: 100px;
+    height: 80px;
+    margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
 }
+#spanTexto{
+    margin-top: 125px;
+    position: fixed;
+
+}
+
 #fotoPubli{
     background-color: transparent;
+}
+#spanFoto{
+    position: fixed;
+    margin-top: 65px;
+
 }
 #previsualizarButton{
     display: flex;
@@ -343,7 +361,7 @@ body{
     color: #39304A;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 #submitPublicar input:hover{
     color: #fff;
@@ -672,8 +690,11 @@ input{
     font-size: 1rem;
 }
 
-#FormRegistro span{
+
+span{
     color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 #RegistroNombre{
@@ -735,7 +756,7 @@ input{
     color: #fff;
     background-color: transparent;
 }
-#submit{
+.submit{
     display: flex;
     justify-content: center;
     height: 50px;

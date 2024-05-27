@@ -2,6 +2,7 @@
 // Incluir el archivo de conexión a MongoDB
 include("Conexion_MongoDB.php");
 
+
 // Verificar si se enviaron todos los datos necesarios por POST
 if (isset($_POST["Usuario"], $_POST["nombre"], $_POST["Apellido"], $_POST["correo"], $_POST["Contrasena"])) {
     // Obtener los datos del formulario
@@ -16,13 +17,11 @@ if (isset($_POST["Usuario"], $_POST["nombre"], $_POST["Apellido"], $_POST["corre
 
     // Validar que los campos de contraseña coincidan
     if ($Contrasena !== $ConfContrasena) {
-        echo "Las contraseñas no coinciden";
-        exit;
+       exit;
     }
 
     // Validar correo electrónico
     if ($correo !== $confcorreo) {
-        echo "Los correos electrónicos no coinciden";
         exit;
     }
 
@@ -30,10 +29,6 @@ if (isset($_POST["Usuario"], $_POST["nombre"], $_POST["Apellido"], $_POST["corre
     $usuarioExist = $coleccion->findOne(["Usuario" => $usuario]);
     $correoExist = $coleccion->findOne(["correo" => $correo]);
 
-    if ($usuarioExist || $correoExist) {
-        echo "Ya existe este nombre de usuario o correo electrónico";
-        exit;
-    }
 
     // Procesar la imagen si se ha subido
     if ((($_FILES["fotoPerfil"]["type"] == "image/webp")) && ($_FILES["fotoPerfil"]["size"] < 3000000)){ // Comprobamos si se ha subido un archivo
@@ -60,10 +55,6 @@ if (isset($_POST["Usuario"], $_POST["nombre"], $_POST["Apellido"], $_POST["corre
     if ($insertResult) {
         header("Location: login.php");
         exit; // Terminar el script después de redireccionar
-    } else {
-        echo "Error al insertar el usuario en la base de datos";
     }
-}else{
-    echo "No se enviaron todos los datos necesarios por POST";
 }
 ?>
