@@ -17,17 +17,28 @@ if (isset($_POST["Usuario"], $_POST["nombre"], $_POST["Apellido"], $_POST["corre
 
     // Validar que los campos de contraseña coincidan
     if ($Contrasena !== $ConfContrasena) {
+        header("location:registre.php");
        exit;
     }
 
     // Validar correo electrónico
     if ($correo !== $confcorreo) {
+        header("location:registre.php");
         exit;
     }
 
+     
     // Verificar si el usuario o correo ya existen
     $usuarioExist = $coleccion->findOne(["Usuario" => $usuario]);
     $correoExist = $coleccion->findOne(["correo" => $correo]);
+    if($usuario!==null){
+        header("location:registre.php");
+        exit;
+    }   
+    if($correo!==null){
+        header("location:registre.php");
+        exit;
+    }
 
 
     // Procesar la imagen si se ha subido

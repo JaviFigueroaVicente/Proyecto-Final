@@ -1,10 +1,10 @@
-const eliminarPubli = document.getElementById('eliminar');
+const eliminarPubli = document.getElementById('eliminarPubli');
 
     eliminarPubli.addEventListener('click', borrar);
 
     function borrar() {
         let confirmar = confirm("¿Estás seguro que deseas eliminar la publicación?");
         if (confirmar) {
-            document.getElementById('eliminarPubli').submit();
+            document.getElementById('eliminar').submit();
         }
     }

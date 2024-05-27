@@ -1,10 +1,13 @@
 <?php
 include("Conexion_MongoDB.php");
 
+
 $buscarUsuarios = isset($_POST['form_busqueda']) ? $_POST['form_busqueda'] : '';
+$publicacionesUsuarios = $publicaciones->find(['usuarioPubli' => $buscarUsuarios],['sort'=>['hora'=>-1]]);
 
-$publicacionesUsuarios = $publicaciones->find(['usuarioPubli' => $buscarUsuarios]);
-
+if($_POST['form_busqueda']===""){
+    $publicacionesUsuarios = $publicaciones->find([],['sort'=>['hora'=>-1]]);
+}
 foreach ($publicacionesUsuarios as $publicacion) {
     $textoPubli = $publicacion["texto"];
     $FotoPubli = $publicacion["fotoPubli"];

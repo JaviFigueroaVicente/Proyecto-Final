@@ -13,12 +13,12 @@ include("Conexion_MongoDB.php");
     if(!isset($_SESSION['usuari_nom'])){
     echo'<section id="MenuLogin">
         <div>
-            <a href="index.php"><img src="img/Logo_Car_Flex.webp" alt="Logo">
+            <a href="index_sin_iniciar.php"><img src="img/Logo_Car_Flex.webp" alt="Logo">
             <h1>Car Flex</h1></a>
         </div>
         <nav id="MenuPrincipal">
             <ul>
-                <li><a href="index.php"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li><a href="index_sin_iniciar.php"><i class="fa-solid fa-house"></i>Inicio</a></li>
                 <li><a href="login.php">Entrar</a></li>
                 <li><a href="registre.php">Registrar</a></li>
             </ul>
