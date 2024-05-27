@@ -1,15 +1,9 @@
 <?php
 include("Conexion_MongoDB.php");
 
-$filtro = isset($_GET['filtro']) ? $_GET['filtro'] : 'recientes';
+$buscarUsuarios = isset($_POST['form_busqueda']) ? $_POST['form_busqueda'] : '';
 
-if ($filtro=='tendencias'){
-    $publicacionesUsuarios = $publicaciones->find([], ['sort' => ['likes' => -1, 'hora' => -1]]);
-}else if($filtro=='gustados'){
-    $publicacionesUsuarios= $publicaciones->find([],['sort'=> ['likes'=>-1]]);
-}else{
-    $publicacionesUsuarios = $publicaciones->find([],['sort'=>['hora'=>-1]]);
-}
+$publicacionesUsuarios = $publicaciones->find(['usuarioPubli' => $buscarUsuarios]);
 
 foreach ($publicacionesUsuarios as $publicacion) {
     $textoPubli = $publicacion["texto"];
@@ -18,13 +12,12 @@ foreach ($publicacionesUsuarios as $publicacion) {
     $tiempo = $publicacion["hora"];
     $ubi = $publicacion["ubicacion"];
     $UsuarioPubli = $publicacion["usuarioPubli"];
-    
 
     // Obtener la foto de perfil del usuario
-    $perfilUsuario = $coleccion->findOne(['Usuario'=>$UsuarioPubli]);
+    $perfilUsuario = $coleccion->findOne(['Usuario' => $UsuarioPubli]);
     $FotoPerfil = $perfilUsuario["fotoPerfil"];
 
- echo '<div class="Publicación">
+    echo '<div class="Publicación">
         <div id="headerPubliInicio">
             <a href=""><img src="'.$FotoPerfil.'" alt="FotoUsuario"></a>
             <div id="usuario">
@@ -53,5 +46,4 @@ foreach ($publicacionesUsuarios as $publicacion) {
         </div>
     </div>';
 }
-
 ?>

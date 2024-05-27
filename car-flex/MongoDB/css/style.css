@@ -50,8 +50,9 @@ body{
     list-style: none;
     gap: 60px;
     margin-top: 20px;
-
 }
+
+
 /*Inicio*/
 #MenuPrincipal{
     display: flex;
@@ -599,8 +600,9 @@ input{
     background-color: #fff;
     border-color: transparent;
     padding-left: 10px;
-
 }
+
+
 .Entrar{
     display: flex;
     justify-content: center;
