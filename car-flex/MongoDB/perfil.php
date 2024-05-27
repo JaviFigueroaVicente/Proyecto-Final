@@ -19,9 +19,9 @@
     ?>
     </header>
     <section class="MenuPerfil">
-            <?php    
-                include("perfil_form.php");
-            ?>
+        <?php    
+            include("perfil_form.php");
+        ?>
     </section>
     <section class="MisPublicaciones">
         <?php
